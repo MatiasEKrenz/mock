@@ -42,8 +42,19 @@ public class Servicio {
         Category[] categories = {category1, category2};
         MyMl myml = new MyMl(categories, currency);
 
+        User user1 = new User(1);
+
+        Country country = new Country("VE");
+
         consulta("GET", "/items/.*", 200, "application/json; charset=utf-8", gson.toJson(item), 1000);
 
-        consulta("GET", "/myml", 200, "application/json; charset=utf-8", gson.toJson(myml), 2000);
+        consulta("GET", "/users/.*", 200, "application/json; charset=utf-8", gson.toJson(user1), 1000);
+
+        consulta("GET", "/sites/.*/categories", 200, "application/json; charset=utf-8", gson.toJson(categories), 1000);
+
+        consulta("GET", "/classified_locations/countries/.*", 200, "application/json; charset=utf-8", gson.toJson(country), 1000);
+
+        consulta("GET", "/currencies/.*", 200, "application/json; charset=utf-8", gson.toJson(currency), 1000);
+
     }
 }
