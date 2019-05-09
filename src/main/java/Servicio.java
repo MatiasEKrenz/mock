@@ -46,15 +46,15 @@ public class Servicio {
 
         Country country = new Country("VE");
 
-        consulta("GET", "/items/.*", 200, "application/json; charset=utf-8", gson.toJson(item), 1000);
+        consulta("GET", "/items/.*", 200, "application/json; charset=utf-8", gson.toJson(item), 10);
 
-        consulta("GET", "/users/.*", 200, "application/json; charset=utf-8", gson.toJson(user1), 1000);
+        consulta("GET", "/users/.*", 200, "application/json; charset=utf-8", gson.toJson(user1), 10);
 
-        consulta("GET", "/sites/.*/categories", 200, "application/json; charset=utf-8", gson.toJson(categories), 1000);
+        consulta("GET", "/sites/.*/categories", 200, "application/json; charset=utf-8", gson.toJson(categories), 10);
 
-        consulta("GET", "/classified_locations/countries/.*", 200, "application/json; charset=utf-8", gson.toJson(country), 1000);
+        consulta("GET", "/classified_locations/countries/.*", 200, "application/json; charset=utf-8", gson.toJson(country), 10);
 
-        consulta("GET", "/currencies/.*", 200, "application/json; charset=utf-8", gson.toJson(currency), 1000);
+        consulta("GET", "/currencies/.*", 200, "application/json; charset=utf-8", gson.toJson(currency), 10);
 
     }
 }
